@@ -37,6 +37,7 @@ system(char *command)
     default: /* Parent */
         if (waitpid(childPid, &status, 0) == -1)
             return -1;
+
         else
             return status;
     }
